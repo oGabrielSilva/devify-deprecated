@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <th:block th:insert="~{components/head}"></th:block>
+  </head>
+  <body>
+    <th:block th:insert="~{components/navbar}"></th:block>
+    <main>
+      <section class="container p-5">
+        <h1 class="title">Oopss... parece que algo deu errado (500)</h1>
+        <p>Desculpe, algo deu errado. Por favor, tente novamente mais tarde</p>
+        <div class="py-5">
+          <div class="buttons">
+            <a href="/" class="button is-ghost" title="Clique para voltar a página inicial">
+              <span class="icon is-small">
+                <i class="fa-solid fa-house"></i>
+              </span>
+              <span>Início</span>
+            </a>
+            <a
+              href="/report"
+              class="button is-ghost has-text-danger"
+              title="Clique para entrar em contato com nossa equipe"
+            >
+              <span class="icon is-small">
+                <i class="fa-solid fa-bug"></i>
+              </span>
+              <span>Encontrou um problema?</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <th:block th:insert="~{components/footer}"></th:block>
+  </body>
+</html>

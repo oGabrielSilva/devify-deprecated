@@ -1,0 +1,91 @@
+<header class="px-3">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="title is-4">Devify</h1>
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="default-navbar-target"
+        id="navbar-burger-button"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="default-navbar-target" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item gap-3 is-flex is-align-items-center" href="/">
+          <span class="icon is-small" aria-hidden="true">
+            <i class="fa-solid fa-house"></i>
+          </span>
+          <span>Home</span>
+        </a>
+
+        <a class="navbar-item gap-3 is-flex is-align-items-center" href="/team">
+          <span class="icon is-small" aria-hidden="true">
+            <i class="fa-solid fa-users-rectangle"></i>
+          </span>
+          <span>Editores</span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/stacks">Stacks</a>
+
+          <div class="navbar-dropdown">
+            <th:block th:if="${stacks != null and !#lists.isEmpty(stacks)}">
+              <a
+                class="navbar-item"
+                th:each="stack : ${stacks}"
+                th:text="${stack.name}"
+                th:title="|Clique para acessar todas as postagens referentes a ${stack.name}|"
+                th:href="@{/stacks/{stackName}(stackName=${stack.name})}"
+              ></a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item" href="/stacks">Todas</a>
+            </th:block>
+            <a
+              th:unless="${stacks != null and !#lists.isEmpty(stacks)}"
+              class="navbar-item"
+              role="none"
+            >
+              Nenhuma Stack cadastrada
+            </a>
+          </div>
+        </div>
+
+        <a class="navbar-item gap-3 is-flex is-align-items-center" href="/about">Sobre a Devify</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <button data-design class="button is-text" style="text-decoration: none">
+              <span class="icon is-small" aria-hidden="true">
+                <i
+                  data-ic-dark="fa-solid fa-moon has-text-link"
+                  data-ic-light="fa-solid fa-sun has-text-warning"
+                  class="fa-solid fa-sun has-text-warning"
+                ></i>
+              </span>
+            </button>
+
+            <button class="button" id="search">
+              <span>Pesquisar</span>
+              <span aria-hidden="true" class="icon is-small">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

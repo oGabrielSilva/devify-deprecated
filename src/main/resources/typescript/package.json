@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "packageManager": "yarn@4.2.2",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "dev": "node esbuild.js",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "esbuild": "^0.23.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "kassiopeia-tools": "^1.7.1"
+  }
+}

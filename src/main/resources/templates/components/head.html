@@ -1,0 +1,15 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  th:content="${description != null || !#strings.isEmpty(description) ? description : 'Devify é uma plataforma para te ajudar a entender o desenvolvimento de software'}"
+/>
+<meta
+  name="keywords"
+  content="dev, desenvolvimento, blog, programação, linguagem, linguagem de programação, web, desenvolvimento web, java, node, node.js, spring-boot, javascript, typescript, react, devify, desenvolvimento de software, desenvolvimento mobile, kotlin"
+/>
+<title th:text="${title != null ? title + ' - Devify' : 'Devify'}"></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+<script src="https://kit.fontawesome.com/78b3364728.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/static/css/main.css" />
